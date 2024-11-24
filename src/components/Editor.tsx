@@ -2,8 +2,7 @@ import { useEditor, EditorContent, BubbleMenu, FloatingMenu } from '@tiptap/reac
 import StarterKit from '@tiptap/starter-kit';
 import CodeBlockLowlight from '@tiptap/extension-code-block-lowlight';
 import { initialContent } from './initialContent';
-import { lowlight } from 'lowlight';
-import js from 'highlight.js/lib/languages/javascript';
+import { common, createLowlight } from 'lowlight';
 import 'highlight.js/styles/tokyo-night-dark.css';
 import {
     RxFontBold,
@@ -15,7 +14,9 @@ import {
 } from 'react-icons/rx';
 import { BubbleButton } from './BubbleButton';
 
-lowlight.registerLanguage('js', js);
+const lowlight = createLowlight(common);
+const tree = lowlight.highlight('js', '"use strict";');
+console.log(tree, {depth: undefined});
 
 export function Editor() {
     const editor = useEditor({
@@ -36,7 +37,7 @@ export function Editor() {
     return (
         <>
           <EditorContent 
-            className="max-w-[600] mx-auto pt-16 prose prose-invert prose-orange" 
+            className="max-w-[600] mx-auto pt-16 prose prose-orange" 
             editor={editor}
           />
           {editor && (

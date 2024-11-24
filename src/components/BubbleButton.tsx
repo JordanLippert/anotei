@@ -7,7 +7,7 @@ export interface BubbleButtonProps extends ComponentProps<'button'> {
 export function BubbleButton(props : BubbleButtonProps) {
     return (
         <button 
-            className="p-2 text-zinc-400 text-sm flex items-center gap-1.5 font-medium leading-none hover:text-zinc-50 hover:text-zinc-500 data-[active=true]:text-red-600" 
+            className="p-2 text-zinc-500 text-sm flex items-center gap-1.5 font-medium leading-none hover:text-zinc-300 hover:text-zinc-800 data-[active=true]:text-red-600" 
             {...props} 
         />
     )
