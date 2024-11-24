@@ -53,13 +53,13 @@ export function Editor() {
             >
                 <button className="flex items-center gap-2 p-1 rounded min-w-[200px] hover:bg-zinc-400">
                     <img 
-                        src="http://www.notions.so/images/blocks/text/en-US.png" 
+                        src="https://www.notion.so/images/blocks/text/en-US.png" 
                         alt="Text" 
                         className="w-12 border border-zinc-400 rounded"
                     />
                     <div className="flex flex-col text-left">
                         <span className="text-sm">Text</span>
-                        <span className="text-xs text-zinc-200">
+                        <span className="text-xs text-zinc-700">
                             Just start writing with plain text.
                         </span>
                     </div>
@@ -70,13 +70,13 @@ export function Editor() {
                     onClick={() => editor.chain().focus().toggleHeading({ level: 1 }).run()}
                 >
                     <img 
-                        src="http://www.notions.so/images/blocks/header.57a7576a.png" 
+                        src="https://www.notion.so/images/blocks/header.57a7576a.png" 
                         alt="Heading" 
                         className="w-12 border border-zinc-400 rounded"
                     />
                     <div className="flex flex-col text-left">
                         <span className="text-sm">Heading 1</span>
-                        <span className="text-xs text-zinc-200">
+                        <span className="text-xs text-zinc-700">
                             Big section heading.
                         </span>
                     </div>
